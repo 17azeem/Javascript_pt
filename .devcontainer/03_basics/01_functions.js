@@ -29,3 +29,27 @@ function loginUsermessage(username){
     return `${username} just logged in`
 }
 console.log(loginUsermessage("azeem"))
+
+//when the function number of parameter is not defined
+//rest operator
+function calculateCartPrice(...num1){
+    return num1
+}
+console.log(calculateCartPrice(200,400,500))
+
+//passing object as parameter
+const user={
+    username:"azeem",
+    price:"299"
+}
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`)
+}
+console.log(handleObject(user))
+
+//passing array as parameter
+const myNewArray=[200,400,100,600]
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+console.log(returnSecondValue(myNewArray))
