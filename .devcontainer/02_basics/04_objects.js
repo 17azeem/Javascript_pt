@@ -52,3 +52,17 @@ console.log(Object.entries(tinderUser))
 
 //to check any property or key exist
 console.log(tinderUser.hasOwnProperty('isLoggedIn'))//true
+
+
+
+/* object destructure */
+const course={
+    coursename:"js in eng",
+    price:"999",
+    courseInstructor:"azeem"
+
+}
+//to make code clean
+const {courseInstructor:instructor}=course
+//inplace of course.courseInstructor we can write courseInstructor
+console.log(instructor)//azeem
