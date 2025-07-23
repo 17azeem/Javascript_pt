@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove and edit</title>
+</head>
+
+<body>
+    <ul class="language">
+    <li>Javascript</li>
+</ul>
+</body>
+<script>
+    function addLanguage(langName){
+        document.createElement('li')
+        li.innerHTML=`${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+
+    function addOptiLang(langName){
+        const li=document.createElement('li')
+        li.append(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang("typescript")
+
+    //edit
+    const secondLang=document.querySelector("li:nth-child(2)")
+    const newli=document.createElement('li')
+    newli.textContent="golang"
+    secondLang.replaceWith(newli)
+
+    //remove
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
